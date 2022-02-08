@@ -11,11 +11,11 @@
 
 ****************************
 #### 1. 从终端新开启一个 session 以访问 TiDB 测试数据库(本机或 TiDB Cloud):
-+ a. **本地 TiDB(由实验 1a、1b 或 1c 创建): 直接登录**
++ a. 本地 TiDB(由实验 1a、1b 或 1c 创建): 直接登录
   ```
   $ mysql -h 127.0.0.1 -P 4000 -uroot
   ``` 
-+ **b. TiDB Cloud(由实验 1d 创建): 通过密码登录**
++ b. TiDB Cloud(由实验 1d 创建): 通过密码登录
   + 点击 TiDB Cloud 集群页面上的 `Connect` 
   + 在 `Connect to TiDB` 页面里的 `Standard Connection` 中，点击 `Add Your Current IP Address`
   + 复制列在 `Step 2: Connect with a SQL client` 下的命令，并执行
