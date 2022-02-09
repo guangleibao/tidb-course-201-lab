@@ -26,19 +26,19 @@ def _print_error(err):
   print('\tsqlstate:',err.sqlstate)
   print('\tmsg:',err.msg)
 
-def _can_tolerate_dml(err) -> bool:
+def _can_tolerate_dml_error(err) -> bool:
   if err.errno in [2013] and err.msg.startswith('Lost connection'): # Connection lost
     return False
   else:
     return True
 
-def _can_tolerate_tx(err) -> bool:
+def _can_tolerate_tx_error(err) -> bool:
   if err.errno in [2055] and err.msg.startswith('Lost connection'): # Connection lost
     return False
   else:
     return True
 
-def _can_tolerate_conn(err) -> bool:
+def _can_tolerate_conn_error(err) -> bool:
   if err.errno in [2013] and err.msg.startswith("Can't connect to"): # Can NOT make connection
     return True # Change to next connection
   else:
@@ -80,7 +80,7 @@ while True:
       except Error as dml_err:
         print('DML Error:',dml_err)
         _print_error(dml_err)
-        if not _can_tolerate_dml(dml_err):
+        if not _can_tolerate_dml_error(dml_err):
           _clean(cursor, conn)
           break
         else:
@@ -93,7 +93,7 @@ while True:
       except Error as tx_err:
         print('TX Error:',tx_err)
         _print_error(tx_err)
-        if not _can_tolerate_tx(tx_err):
+        if not _can_tolerate_tx_error(tx_err):
           _clean(cursor, conn)
           break
         else:
@@ -101,6 +101,6 @@ while True:
   except Error as connect_err:
     print('CONNECT Error:',connect_err)
     _print_error(connect_err)
-    if not _can_tolerate_conn(connect_err): # The client program will exit. Should not be True!
+    if not _can_tolerate_conn_error(connect_err): # The client program will exit. Should not be True!
       break
     _clean(cursor, conn)
