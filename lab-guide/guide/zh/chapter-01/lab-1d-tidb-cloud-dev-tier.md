@@ -5,7 +5,6 @@
 
 ## 适用场景
 + 在 TiDB Cloud 中部署一个免费的测试集群。
-+ 操作系统上已经安装了 `mysql client` 或 `MySQL Workbench (6.3.10)`。
 + 具备互联网连接。
 
 ## 步骤

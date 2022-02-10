@@ -6,6 +6,7 @@
 
 ## **适用场景**
 + `TiDB` 集群已启动
++ 操作系统上已经安装了 `mysql client` 或 `MySQL Workbench (6.3.10)`。
 
 ## **步骤**
 
