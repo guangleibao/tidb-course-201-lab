@@ -5,7 +5,7 @@
 	Note: The initial(this) size is small, so I turn on the autocommit.
 */
 
-SET AUTOCOMMIT=1;
+SET AUTOCOMMIT = 1;
 
 DROP DATABASE IF EXISTS `universe`;
 CREATE DATABASE `universe` DEFAULT CHARACTER SET utf8mb4;
