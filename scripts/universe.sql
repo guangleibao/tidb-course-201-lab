@@ -1,8 +1,8 @@
 /* 
-	Sample schema for planets and stars in the universe. No warranty of any data correctness. It should not be used in any circumstances outside PingCAP training courses. 
-	Data source: Space research open data set all over the world.
-	Author: guanglei.bao@pingcap.com
-	Note: The initial(this) size is small, so I turn on the autocommit.
+*	Sample schema for planets and stars in the universe. No warranty of data correctness. 
+*	It should not be used in any circumstances outside PingCAP training courses. 
+*	Data source: Space research open data set all over the world.
+*	Author: guanglei.bao@pingcap.com.
 */
 
 SET AUTOCOMMIT = 1;

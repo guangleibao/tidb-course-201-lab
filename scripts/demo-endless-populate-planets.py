@@ -101,6 +101,6 @@ while True:
   except Error as connect_err:
     print('CONNECT Error:',connect_err)
     _print_error(connect_err)
-    if not _can_tolerate_conn_error(connect_err): # The client program will exit. Should not be True!
+    if not _can_tolerate_conn_error(connect_err): # The client program will exit.
       break
     _clean(cursor, conn)
