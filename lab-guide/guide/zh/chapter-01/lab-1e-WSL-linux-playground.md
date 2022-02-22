@@ -1,4 +1,4 @@
-# **实验 1c: 在单机 `Windows` 中安装 `WSL` `(Ubuntu)`, 并从中启动 `TiDB Playground`**
+# **实验 1e: 在单机 `Windows` 中安装 `WSL` `(Ubuntu)`, 并从中启动 `TiDB Playground`**
 
 ## **目的**
 部署测试目的 TiDB 集群，作为本课程的实验基础
@@ -17,7 +17,7 @@
 
 ****************************
 #### 2. 安装完成后重启计算机，开机后会自动进入 Ubuntu 命令行,设置您的 Ubuntu 用户 :
-<img src="../../../diagram/WSL-settings.png" width="60%" align="top"/>
+<img src="../../../diagram/WSL-settings.png" width="70%" align="top"/>
 
 ****************************
 #### 3. 下载并安装 mysql-client:
